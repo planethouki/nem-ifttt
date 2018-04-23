@@ -6,7 +6,12 @@ var server = app.listen(process.env.PORT || 8080, function(){
 });
 
 app.get("/height", function(req, res, next) {
-  res.json(JSON.stringify(address));
+  //res.json(JSON.stringify(address));
+  nem.com.requests.account.data(endpoint, address).then((data) => {
+    res.json(JSON.stringify(data));
+  }, (err) => {
+    console.log(err);
+  })
 });
 
 var nem = require("nem-sdk").default;
