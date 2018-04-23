@@ -7,15 +7,23 @@ var server = app.listen(process.env.PORT || 8080, function(){
 
 app.get("/height", function(req, res, next) {
   //res.json(JSON.stringify(address));
-  nem.com.requests.account.data(endpoint, address).then((data) => {
-    res.json(JSON.stringify(data));
+  nem.com.requests.chain.height(endpoint).then((data) => {
+    res.json(data);
   }, (err) => {
     console.log(err);
   })
 });
 
+app.get("/account", function(req, res, next) {
+  nem.com.requests.account.data(endpoint, address).then( (data) => {
+    res.json(data);
+  }, (err) => {
+    console.log(err);
+  });
+});
+
 var nem = require("nem-sdk").default;
-var endpoint = nem.model.objects.create("endpoint")(nem.model.nodes.deafultTestnet, nem.model.nodes.defaultPort);
+var endpoint = nem.model.objects.create("endpoint")(nem.model.nodes.defaultTestnet, nem.model.nodes.defaultPort);
 
 var address = "TA2VKRQKUJDOBIAEX2METU4UBZ6MCSERPJE3UEOT";
 
