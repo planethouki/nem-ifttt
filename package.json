@@ -1,7 +1,10 @@
 {
   "name": "nem-ifttt",
   "version": "0.0.1",
-  "scripts": {
-    "start": "node main.js"
+  "description": "A sample",
+  "main": "index.js",
+  "dependencies": {
+    "http": "0.0.0",
+    "https": "^1.0.0"
   }
 }
