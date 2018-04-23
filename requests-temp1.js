@@ -17,7 +17,7 @@ app.get("/height", function(req, res, next) {
 var nem = require("nem-sdk").default;
 var endpoint = nem.model.objects.create("endpoint")(nem.model.nodes.deafultTestnet, nem.model.nodes.defaultPort);
 
-var address = "NA2VKRQKUJDOBIAEX2METU4UBZ6MCSERPKULEPXB";
+var address = "TA2VKRQKUJDOBIAEX2METU4UBZ6MCSERPJE3UEOT";
 
 // Get chain height
 nem.com.requests.chain.height(endpoint).then(function(res) {
