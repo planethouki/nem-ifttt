@@ -1,11 +1,17 @@
 // Load nem-browser library
 var nem = require("nem-sdk").default;
 
+
+
 // Create an NIS endpoint object
-var endpoint = nem.model.objects.create("endpoint")(nem.model.nodes.defaultTestnet, nem.model.nodes.websocketPort);
+//var endpoint = nem.model.objects.create("endpoint")(nem.model.nodes.defaultTestnet, nem.model.nodes.websocketPort);
+var mainnet = nem.model.nodes.mainnet;
+target_node = mainnet[Math.floor(Math.random()* (mainnet.length - 2)) + 1];
+var endpoint = nem.model.objects.create("endpoint")(mainnet, nem.model.nodes.websocketPort);
 
 // Address to subscribe
-var address = "TA2VKRQKUJDOBIAEX2METU4UBZ6MCSERPJE3UEOT";
+//var address = "TA2VKRQKUJDOBIAEX2METU4UBZ6MCSERPJE3UEOT";
+var address = "NAUY72-H2QSOA-5RP5UC-BQXDSA-TF6S52-PGP3T3-GJ52";
 
 // Create a connector object
 var connector = nem.com.websockets.connector.create(endpoint, address);
