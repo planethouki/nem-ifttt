@@ -1,3 +1,4 @@
-#web: node requests-temp1.js
-#web: node index.js
-web: node websockets-temp1.js
+web: node index.js
+req: node requests-temp1.js
+soc: node websockets-temp1.js
+mon: node monitor-temp3.js
