@@ -33,11 +33,11 @@ NEM_ADDRESS=<your_nem_address>
 
 ### IFTTT Webhooks Key
 Service > Webhooks > Documentation の先に書いてあります。  
-<img alt="IFTTT Webhooks Key Screen" src="https://github.com/planethouki/images/blob/master/nem-ifttt/nem-ifttt08.PNG" width="398px">
+<img alt="IFTTT Webhooks Key Screen" src="https://github.com/planethouki/images/blob/master/nem-ifttt/nem-ifttt08.PNG" width="199px">
 
 ### Event Name
 HerokuからのWebhookを受け付けるアプレットを作るとき、Event Nameを記述します。  
-<img alt="Event Name Screen" src="https://github.com/planethouki/images/blob/master/nem-ifttt/nem-ifttt07.PNG" width="396px">
+<img alt="Event Name Screen" src="https://github.com/planethouki/images/blob/master/nem-ifttt/nem-ifttt07.PNG" width="198px">
 
 ### body
 `value1`に格納されてます。
