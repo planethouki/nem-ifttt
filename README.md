@@ -5,7 +5,7 @@ nemのアドレスを監視して、unconfirmedTransactionとquantityの変化�
 
 検知したら、IFTTTにwebhookします。
 
-### Heroku
+## Heroku
 
 [Heroku CLI](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up)でやります。
 
@@ -16,11 +16,11 @@ heroku create your-nem-ifttt
 git push -u heroku master
 ```
 
-#### Config Variables
+### Config Variables
 Config Variablesで、NEMアドレスとIFTTTの設定を記述。
 ![Heroku Config Variables Screen](https://github.com/planethouki/images/blob/master/nem-ifttt/nem-ifttt06.png)
 
-##### local
+#### local
 `heroku local web`するには、`.env`ファイルが必要。
 
 ```
@@ -29,15 +29,15 @@ IFTTT_EVENT_NAME=<your_ifttt_event_name>
 NEM_ADDRESS=<your_nem_address>
 ```
 
-### IFTTT
+## IFTTT
 
-#### IFTTT Webhooks Key
+### IFTTT Webhooks Key
 Service > Webhooks > Documentation の先に書いてあります。
-![IFTTT Webhooks Key Screen](https://github.com/planethouki/images/blob/master/nem-ifttt/nem-ifttt08.png)
+![IFTTT Webhooks Key Screen](https://github.com/planethouki/images/blob/master/nem-ifttt/nem-ifttt08.PNG)
 
-#### Event Name
+### Event Name
 HerokuからのWebhookを受け付けるアプレットを作るとき、Event Nameを記述します。
-![Event Name Screen](https://github.com/planethouki/images/blob/master/nem-ifttt/nem-ifttt07.png)
+![Event Name Screen](https://github.com/planethouki/images/blob/master/nem-ifttt/nem-ifttt07.PNG)
 
-#### body
+### body
 `value1`に格納されてます。
