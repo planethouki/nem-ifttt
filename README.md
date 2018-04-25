@@ -17,7 +17,7 @@ git push -u heroku master
 ```
 
 ### Config Variables
-Config Variablesで、NEMアドレスとIFTTTの設定を記述。
+Config Variablesで、NEMアドレスとIFTTTの設定を記述。  
 ![Heroku Config Variables Screen](https://github.com/planethouki/images/blob/master/nem-ifttt/nem-ifttt06.png)
 
 #### local
@@ -32,11 +32,11 @@ NEM_ADDRESS=<your_nem_address>
 ## IFTTT
 
 ### IFTTT Webhooks Key
-Service > Webhooks > Documentation の先に書いてあります。
+Service > Webhooks > Documentation の先に書いてあります。  
 <img alt="IFTTT Webhooks Key Screen" src="https://github.com/planethouki/images/blob/master/nem-ifttt/nem-ifttt08.PNG" width="398px">
 
 ### Event Name
-HerokuからのWebhookを受け付けるアプレットを作るとき、Event Nameを記述します。
+HerokuからのWebhookを受け付けるアプレットを作るとき、Event Nameを記述します。  
 <img alt="Event Name Screen" src="https://github.com/planethouki/images/blob/master/nem-ifttt/nem-ifttt07.PNG" width="396px">
 
 ### body
