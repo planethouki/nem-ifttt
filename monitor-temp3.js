@@ -5,7 +5,7 @@ var address = process.env.NEM_ADDRESS;
 if (!nem.model.address.isValid(address)) {
   throw "address invalid: "+ address;
 };
-var node = address.charAt() == "N" ? nem.model.nodes.defaultTestnet : nem.model.nodes.defaultMainnet;
+var node = address.charAt() == "N" ? nem.model.nodes.defaultMainnet : nem.model.nodes.defaultTestnet;
 var endpoint = nem.model.objects.create("endpoint")(node, nem.model.nodes.defaultPort);
 
 var startDate = new Date();
