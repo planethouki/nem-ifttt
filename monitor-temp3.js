@@ -1,14 +1,18 @@
 var nem = require('nem-sdk').default;
 var request = require('request');
 
-var endpoint = nem.model.objects.create("endpoint")(nem.model.nodes.defaultTestnet, nem.model.nodes.defaultPort);
+var address = process.env.NEM_ADDRESS;
+if (!nem.model.address.isValid(address)) {
+  throw "address invalid: "+ address;
+};
+var node = address.charAt() == "N" ? nem.model.nodes.defaultTestnet : nem.model.nodes.defaultMainnet;
+var endpoint = nem.model.objects.create("endpoint")(node, nem.model.nodes.defaultPort);
 
-var address = "TA2VKRQKUJDOBIAEX2METU4UBZ6MCSERPJE3UEOT";
 var startDate = new Date();
 var lastValue = 0;
 var lastUnconfirmedTx = [];
 
-var url = 'https://maker.ifttt.com/trigger/nem_message/with/key/'+process.env.IFTTT_KEY;
+var url = 'https://maker.ifttt.com/trigger/'+process.env.IFTTT_EVENT_NAME+'/with/key/'+process.env.IFTTT_KEY;
 
 setInterval(function loop() {
 
