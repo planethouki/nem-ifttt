@@ -14,6 +14,8 @@ var lastUnconfirmedTx = [];
 
 var url = 'https://maker.ifttt.com/trigger/'+process.env.IFTTT_EVENT_NAME+'/with/key/'+process.env.IFTTT_KEY;
 
+process.on('unhandledRejection', console.dir);
+
 setInterval(function loop() {
 
   nem.com.requests.account.mosaics.owned(endpoint, address).then( (accountData) => {
