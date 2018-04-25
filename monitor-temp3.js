@@ -36,7 +36,9 @@ setInterval(function loop() {
       console.log('No Value activity');
     };
     lastValue = value;
-  })
+  }, (err) => {
+    console.log(err);
+  });
 
   nem.com.requests.account.transactions.unconfirmed(endpoint, address).then( (txsData) => {
     if ( txsData.data.length > 0 ) {
@@ -55,6 +57,8 @@ setInterval(function loop() {
       console.log('No unconfirmed transactions');
     }
     lastUnconfirmedTx = txsData.data;
+  }, (err) => {
+    console.log(err);
   });
 
 }, 10000);
@@ -73,3 +77,9 @@ function postifttt(value) {
     //console.log(body);
   });
 }
+
+var http = require('http');
+http.createServer(function(request, response) {
+  response.writeHead(200, {'Content-Type': 'text/plain'});
+  response.end('Hello World\n');
+}).listen(process.env.PORT || 8080);
