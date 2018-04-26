@@ -1,7 +1,7 @@
 {
   "name": "nem-ifttt",
   "version": "0.0.1",
-  "description": "A sample",
+  "description": "nem address monitoring. notify ifttt as webhook",
   "main": "index.js",
   "dependencies": {
     "express": "^4.16.3",
