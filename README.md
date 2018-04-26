@@ -1,7 +1,9 @@
 # nem-ifttt
 Herokuで動きます
 
-nemのアドレスを監視して、unconfirmedTransactionとquantityの変化を検知します。
+NEMのアドレスを監視します。  
+XEMのquantityの変化を検知します。モザイクには反応しません。  
+unconfirmedTransactionが発生したら検知します。すべての種類のトランザクションに反応します。
 
 検知したら、IFTTTにwebhookします。
 
